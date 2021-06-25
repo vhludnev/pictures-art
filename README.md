@@ -1,8 +1,9 @@
 ## Art landing page
 
-- Javascript
+- Javascript, CSS, HTML
 - Download, upload
-- Bootstrap
-- Font awesome
+- Smooth scroll
+- Bootstrap.css, animate.css
+- Webpack
 
 [Check on Git Pages](https://vhludnev.github.io/pictures-art)
