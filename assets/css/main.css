@@ -1779,6 +1779,7 @@ border: 1px solid white;
     margin-bottom: 4rem;
   }
   .calc select {
+	width: 77vw;
     left: 0;
     margin: 0;
     padding: 1rem;
