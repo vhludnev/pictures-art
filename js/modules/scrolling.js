@@ -17,33 +17,35 @@ const scrolling = (upSelector) => {
         speed = 0.3; /* NB: lower the number faster the speed */
     
     links.forEach(link => {
-        link.addEventListener('click', function(event) {
-            event.preventDefault();
+		if (!link.parentElement.parentElement.classList.contains('burger-menu')) {  /* removing smooth scroll effect from burger menu */
+			link.addEventListener('click', function(event) {
+				event.preventDefault();
 
-            let widthTop = document.documentElement.scrollTop,
-                hash = this.hash,
-                toBlock = document.querySelector(hash).getBoundingClientRect().top, /* [getBoundingClientRect().top] - will identify location of the window */
-                start = null;
+				let widthTop = document.documentElement.scrollTop,
+					hash = this.hash,
+					toBlock = document.querySelector(hash).getBoundingClientRect().top, /* [getBoundingClientRect().top] - will identify location of the window */
+					start = null;
 
-            requestAnimationFrame(step);
+				requestAnimationFrame(step);
 
-            function step(time) {
-                if (start === null) {
-                    start = time;
-                }
+				function step(time) {
+					if (start === null) {
+						start = time;
+					}
 
-                let progress = time - start,
-                    r = (toBlock < 0 ? Math.max(widthTop - progress/speed, widthTop + toBlock) : Math.min(widthTop + progress/speed, widthTop + toBlock));
+					let progress = time - start,
+						r = (toBlock < 0 ? Math.max(widthTop - progress/speed, widthTop + toBlock) : Math.min(widthTop + progress/speed, widthTop + toBlock));
 
-                    document.documentElement.scrollTo(0, r); /* will activate animation: to x=0 (does not change) and y=r */
+						document.documentElement.scrollTo(0, r); /* will activate animation: to x=0 (does not change) and y=r */
 
-                if (r != widthTop + toBlock) {
-                    requestAnimationFrame(step);
-                } else {
-                    location.hash = hash; /* will stop the animation when it reaches the certain destination */
-                }
-            }
-        });
+					if (r != widthTop + toBlock) {
+						requestAnimationFrame(step);
+					} else {
+						location.hash = hash; /* will stop the animation when it reaches the certain destination */
+					}
+				}
+			});
+		}
     });
 }
 

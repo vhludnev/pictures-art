@@ -514,6 +514,7 @@ h4 {
   display: block;
   font-size: 1.9rem;
   padding: 2rem 0;
+  background: transparent;
 }
 .calc .promocode {
   opacity: 0.6;
@@ -1638,7 +1639,7 @@ border: 1px solid white;
   }
   .main-features {
     max-width: auto;
-    margin-left: 20%;
+    margin-left: 10%;
   }
   .main-slider-btn {
     width: 2rem;
