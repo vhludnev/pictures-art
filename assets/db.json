@@ -1,0 +1,23 @@
+{
+	"styles": [{
+			"src": "assets/img/styles-5.jpg",
+			"title": "Pastels",
+			"link": "#pastel"
+		},
+		{
+			"src": "assets/img/styles-6.jpg",
+			"title": "Pop Art",
+			"link": "#popart"
+		},
+		{
+			"src": "assets/img/styles-7.png",
+			"title": "Photomosaic",
+			"link": "#mozaika"
+		},
+		{
+			"src": "assets/img/styles-8.jpg",
+			"title": "Caricature",
+			"link": "#sharj"
+		}
+	]
+}
