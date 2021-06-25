@@ -1670,6 +1670,9 @@ border: 1px solid white;
   .main .button-order-img {
     right: -4rem;
   }
+  .main .main-slider-item img {
+	max-width: 360px;
+  }
   .promo {
     padding: 5rem 0;
   }
